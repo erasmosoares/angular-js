@@ -25,3 +25,11 @@ code main.ts
 ## TS Compiler
 
 tsc main.ts
+
+## Create component
+
+ng g c component-name
+
+## Create service
+
+ng g service make
