@@ -1,7 +1,58 @@
+<nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+          <img src="https://i.neoseeker.com/m/s/592650_photo.gif?t=1536146876" width="30" height="30" class="d-inline-block align-top" alt="">
+          Coffee and Go
+        </a>
+</nav>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">Coffee Manager</h1>
+        <p class="lead">A simple coffee manager for your day.</p>
+    </div>
+</div>
+<div class="container">
+<div class="card-columns">
+    <div class="card">
+        <img class="card-img-top" src="https://media0.giphy.com/media/jjblikZd1MlXO/giphy.gif" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Work faster with coffee</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h6>{{pageTitle}}</h6>
+            <ul>
+                <li *ngFor="let author of authorsList">
+                {{author}}
+                </li>  
+            </ul>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <img [src]="imageUrl" class="img-fluid" alt="Responsive image">
+                <a href="#" [style.backgroundColor]="isActive ? 'blue':'white'" (click)="onSave($event)">It's a test</a>
+            </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Event Filtering</h5>
+            <!--<input [value]="email" (keyup.enter)="onKeyUp()"/>-->
+            <input [(ngModel)]="email" (keyup.enter)="onKeyUp()"/>
+        </div>
+    </div>
+    <div class="card">
+        <img [src]="imageUrl" class="img-fluid" alt="Responsive image">
+    </div>
+</div>
+</div>
 
-<h2>{{pageTitle}}</h2>
-<ul>
- <li *ngFor="let author of authorsList">
-  {{author}}
- </li>  
-</ul>
+<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+        ...
+        </div>
+    </div>
+</div>
+

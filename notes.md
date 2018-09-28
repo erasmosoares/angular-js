@@ -1,3 +1,4 @@
+
 # install Angular cli
 
 npm install -g @angular/cli
@@ -33,3 +34,11 @@ ng g c component-name
 ## Create service
 
 ng g service make
+
+## Add Boostrasp
+
+npm install bootstrap
+
+## Clonning repository
+
+npm install
