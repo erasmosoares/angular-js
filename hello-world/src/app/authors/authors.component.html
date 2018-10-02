@@ -43,16 +43,20 @@
         </div>
     </div>
     <div class="card">
-        <img [src]="imageUrl" class="img-fluid" alt="Responsive image">
-    </div>
-</div>
-</div>
-
-<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-        ...
+        <div class="card-body">
+            <h5 class="card-title">{{course.title | uppercase}}</h5>
+            <p class="card-text">{{course.students | number}}</p>
+            <p class="card-text">{{course.rating | number:'1.2-2'}}</p>
+            <p class="card-text">{{course.price | currency:'CAD'}}</p>
+            <p class="card-text">{{course.releaseDate | date:'shortDate'}}</p>
+            <p class="card-text">{{testCustomPipeText | summary:50}}</p> 
         </div>
     </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">STAR</h5>
+        </div>
+   </div>
 </div>
+
 

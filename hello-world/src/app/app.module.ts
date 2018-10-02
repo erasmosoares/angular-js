@@ -1,3 +1,4 @@
+import { SummaryPipe } from './summary.pipe';
 import { AuthorsService } from './authors.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -8,7 +9,8 @@ import { AuthorsComponent } from './authors/authors.component';
 @NgModule({
   declarations: [
     AppComponent,
-    AuthorsComponent
+    AuthorsComponent,
+    SummaryPipe
   ],
   imports: [
     BrowserModule,
