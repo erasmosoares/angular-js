@@ -1,3 +1,4 @@
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { SummaryPipe } from './summary.pipe';
 import { AuthorsService } from './authors.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -14,7 +15,8 @@ import { AuthorsComponent } from './authors/authors.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AngularFontAwesomeModule
   ],
   providers: [
     AuthorsService

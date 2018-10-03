@@ -11,6 +11,7 @@ export class AuthorsComponent implements OnInit {
   pageTitle;
   authorsList;
   isActive = true;
+  isClicked = false;
   email = "me@example.com";
   imageUrl = "https://cdn-images-1.medium.com/max/1600/1*VnJ1MGwCkkQ5umi895C6Fg.gif";
   course = {
@@ -37,5 +38,9 @@ export class AuthorsComponent implements OnInit {
 
   onKeyUp(){
     console.log(this.email);
+  }
+
+  onClick(){
+    this.isClicked = !this.isClicked;
   }
 }
