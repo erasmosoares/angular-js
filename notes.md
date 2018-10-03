@@ -39,6 +39,10 @@ ng g service make
 
 npm install bootstrap
 
+## Creating a custom pipe
+
+ng g p title-case
+
 ## Clonning repository
 
 npm install

@@ -1,5 +1,6 @@
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
-import { SummaryPipe } from './summary.pipe';
+import { SummaryPipe } from './pipes/summary.pipe';
+import { TitleCasePipe } from './pipes/titlecase.pipe';
 import { AuthorsService } from './authors.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -11,7 +12,8 @@ import { AuthorsComponent } from './authors/authors.component';
   declarations: [
     AppComponent,
     AuthorsComponent,
-    SummaryPipe
+    SummaryPipe,
+    TitleCasePipe
   ],
   imports: [
     BrowserModule,
