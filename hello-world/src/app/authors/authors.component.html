@@ -57,7 +57,7 @@
             <h5 class="card-title">STAR</h5>
             <h6 class="card-subtitle mb-2 text-muted">Task 2</h6>
             <p class="card-text">Favorite component.</p>
-            <fa [name]="isClicked ? 'star':'cog'" animation="spin" size="lg" (click)="onClick()"></fa>
+            <fa [name]="isClicked ? 'star':'cog'" animation="spin" size="lg" (click)="onClick()" (change)="onFavoriteChanged"></fa>
         </div>
    </div>
    <div class="card">
