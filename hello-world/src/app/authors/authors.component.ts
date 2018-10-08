@@ -1,10 +1,11 @@
 import { AuthorsService } from './../authors.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-authors',
   templateUrl: './authors.component.html',
-  styleUrls: ['./authors.component.css']
+  styleUrls: ['./authors.component.css'],
+  encapsulation: ViewEncapsulation.Emulated
 })
 
 export class AuthorsComponent implements OnInit {

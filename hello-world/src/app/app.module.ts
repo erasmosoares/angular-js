@@ -7,13 +7,17 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { AuthorsComponent } from './authors/authors.component';
+import { PanelComponent } from './panel/panel.component';
+import { LikeComponent } from './like/like.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthorsComponent,
     SummaryPipe,
-    TitleCasePipe
+    TitleCasePipe,
+    PanelComponent,
+    LikeComponent
   ],
   imports: [
     BrowserModule,
