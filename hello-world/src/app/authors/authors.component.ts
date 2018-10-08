@@ -47,12 +47,4 @@ export class AuthorsComponent implements OnInit {
   onClick(){
     this.isClicked = !this.isClicked;
   }
-
-  onFavoriteChanged(eventArgs:FavoriteChangedArgs){
-    console.log("Favorite changed : ", eventArgs);
-  }
-}
-
-export interface FavoriteChangedArgs{
-  newValue:boolean;
 }
