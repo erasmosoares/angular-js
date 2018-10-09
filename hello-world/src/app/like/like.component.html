@@ -1,7 +1,2 @@
-<div class="card">
-    <div class="card-body">
-        <p class="card-text">Like component.</p>
-        <fa [name]="isClicked ? 'star':'cog'" animation="spin" size="lg" (click)="onClick()"></fa> {{likes}}
-    </div>
-    
-</div>
+<span [class]="isClicked ? 'fa fa-heart':'fa fa-heart-o'" [class.highlighted]="isClicked" size="lg" (click)="onClick()"></span>
+<span> {{ likes }}</span>

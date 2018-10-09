@@ -7,13 +7,14 @@ import { Component } from '@angular/core';
 })
 export class LikeComponent {
 
-  isActive:boolean;
+  isClicked:boolean;
   likes = 0;
 
   constructor() { }
 
   onClick(){
-
+    this.isClicked = !this.isClicked;
+    this.likes = this.isClicked ? 1 : 0;
   }
 
 }
