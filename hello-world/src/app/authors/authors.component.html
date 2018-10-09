@@ -108,13 +108,26 @@
     <div class="card">
             <div class="card-body">
                 <h5 class="card-title">ngFor</h5>
+                <button (click)="onAdd()">Add</button>
                 <ul>
                     <li *ngFor="let course of advancedCourses; index as i">
                         {{i}} - {{course.name}}
+                        <button (click)="onRemove(course)">Remove</button>
                     </li>
                 </ul>
             </div>
-        </div>
+    </div>
+    <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">ngFor and TrackBy</h5>
+                <button (click)="LoadCourses()">Load</button>
+                <ul>
+                    <li *ngFor="let course of advancedCourses2; trackBy: trackCourse">
+                        {{course.name}}
+                    </li>
+                </ul>
+            </div>
+    </div>
 </div>
 
 

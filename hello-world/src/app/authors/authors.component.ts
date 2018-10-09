@@ -34,6 +34,8 @@ export class AuthorsComponent implements OnInit {
     {id:3, name:'course3'},
   ]
 
+  advancedCourses2;
+
   testCustomPipeText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultrices quam mi, ac vehicula metus pellentesque ut. Suspendisse tincidunt ultrices lacus, sit amet bibendum ex rhoncus non. Proin eu pretium libero. Suspendisse varius urna eu nisi dignissim, ut fringilla sapien convallis. Maecenas nec ornare odio. Nullam vestibulum vehicula tortor, sit amet venenatis augue pellentesque ac. Integer leo neque, faucibus vel porta a, sollicitudin eu mauris."
   task3Input = "write here";
 
@@ -56,5 +58,26 @@ export class AuthorsComponent implements OnInit {
 
   onClick(){
     this.isClicked = !this.isClicked;
+  }
+
+  onAdd(){
+    this.advancedCourses.push({ id: 4, name: 'course4'});
+  }
+
+  onRemove(course){
+    let index = this.advancedCourses.indexOf(course);
+    this.advancedCourses.splice(index, 1);
+  }
+
+  LoadCourses(){
+    this.advancedCourses2 = [
+      {id:1, name:'course1'},
+      {id:2, name:'course2'},
+      {id:3, name:'course3'},
+    ]
+  }
+
+  trackCourse(index, course){
+      return course ? course.id : undefined;
   }
 }
