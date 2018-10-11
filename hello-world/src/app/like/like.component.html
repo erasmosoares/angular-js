@@ -1,2 +1,6 @@
-<span [class]="isClicked ? 'fa fa-heart':'fa fa-heart-o'" [class.highlighted]="isClicked" size="lg" (click)="onClick()"></span>
+<span  [class.highlighted]="isClicked"  size="lg" 
+class="fa" [ngClass]="{
+      'fa-heart':isClicked,
+      'fa-heart-o': !isClicked
+}" (click)="onClick()"></span>
 <span> {{ likes }}</span>

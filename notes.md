@@ -45,4 +45,8 @@ ng g p title-case
 
 ## Clonning repository
 
-npm install
+npm install  
+
+## Creating Custom Directive
+
+ng g d input-format

@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { AuthorsComponent } from './authors/authors.component';
 import { PanelComponent } from './panel/panel.component';
 import { LikeComponent } from './like/like.component';
+import { InputFormatDirective } from './directives/input-format.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { LikeComponent } from './like/like.component';
     SummaryPipe,
     TitleCasePipe,
     PanelComponent,
-    LikeComponent
+    LikeComponent,
+    InputFormatDirective
   ],
   imports: [
     BrowserModule,
