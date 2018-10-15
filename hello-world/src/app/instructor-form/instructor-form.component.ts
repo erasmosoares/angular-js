@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'instructor-form',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InstructorFormComponent {
 
-  courseCategories = [
+  categories = [
     {id:1,name:'Development'},
     {id:2,name:'Art'},
     {id:3,name:'Languages'}

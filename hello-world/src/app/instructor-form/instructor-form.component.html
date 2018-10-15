@@ -1,4 +1,4 @@
-<form #f="ngForm" (ngSubmit)="submit(f)">
+<form #f="ngForm" (ngSubmit)="submit(f.value)">
     <div ngModelGroup="course" #course="ngModelGroup">
         <div class="form-group">
             <label for="name">Course Name</label>
@@ -28,7 +28,7 @@
               #courseCategory="ngModel"  
               class="form-control">
               <option value=""></option>
-              <option *ngFor="let category of courseCategories" [value]="category.id">{{category.name}}</option>
+              <option *ngFor="let c of categories" [value]="c.id">{{c.name}}</option>
             </select>
             <div 
             class="alert alert-danger" 
@@ -41,7 +41,7 @@
                 <label>
                   <input 
                   type="checkbox" 
-                  ngModel name="hasGuarantee"> 30-day money-back guarantee
+                  ngModel name="hasGuarantee"> 30-day money-back guarantee?
                 </label>
               </div> 
           </div>
