@@ -13,4 +13,8 @@ export class ContactFormComponent {
     console.log(x);
   }
 
+  submit(f){
+    console.log(f);
+    console.log(f.value.contact.firstName);
+  }
 }
