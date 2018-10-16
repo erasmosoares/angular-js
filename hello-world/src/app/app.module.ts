@@ -4,7 +4,7 @@ import { TitleCasePipe } from './pipes/titlecase.pipe';
 import { AuthorsService } from './authors.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { AuthorsComponent } from './authors/authors.component';
 import { PanelComponent } from './panel/panel.component';
@@ -32,6 +32,7 @@ import { SignupFormComponent } from './signup-form/signup-form.component';
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AngularFontAwesomeModule
   ],
   providers: [
