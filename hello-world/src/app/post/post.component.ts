@@ -12,9 +12,11 @@ export class PostComponent implements OnInit{
 
   ngOnInit(): void {
     this.service.getPosts()
-    .subscribe(response => {
+    .subscribe(
+      response => {
       this.posts = response.json();
-    },() => {
+    },
+      error => {
       alert('An unexpected error occured.');
     });
   }
@@ -26,20 +28,27 @@ export class PostComponent implements OnInit{
     let  post = {title: input.value};
     input.value = '';
     this.service.createPost(post)
-    .subscribe(response =>{
+    .subscribe(
+      response =>{
         post['id'] = response.json().id;
         this.posts.splice(0,0,post); //put first position
-    },() => {
-      alert('An unexpected error occured.');
+    },
+      (error: Response) => {
+        if(error.status === 400)
+          alert('400 occured.');
+        else  
+          alert('An unexpected error occured.');
     });
    }
 
    updatePost(post){
      //update only some properties
      this.service.updatePost(post)
-     .subscribe(response =>{
+     .subscribe(
+       response =>{
        console.log(response.json())
-     },() => {
+     },
+        error => {
       alert('An unexpected error occured.');
     });
      //this.http.put(this.url,JSON.stringify(post));
@@ -50,8 +59,12 @@ export class PostComponent implements OnInit{
      .subscribe(() =>{
        let index = this.posts.indexOf(post);
        this.posts.splice(index,1)
-     },() => {
-      alert('An unexpected error occured.');
+     },
+      (error: Response) => {
+      if(error.status === 404)
+        alert('This post has already been deleted')  
+      else  
+        alert('An unexpected error occured.');
     });
    }
 }
