@@ -1,3 +1,4 @@
+import { PostService } from './services/post.service';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { SummaryPipe } from './pipes/summary.pipe';
 import { TitleCasePipe } from './pipes/titlecase.pipe';
@@ -21,7 +22,7 @@ import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent, 
     AuthorsComponent,
     SummaryPipe,
     TitleCasePipe,
@@ -44,7 +45,8 @@ import { HttpModule } from '@angular/http';
     HttpModule
   ],
   providers: [
-    AuthorsService
+    AuthorsService,
+    PostService
   ],
   bootstrap: [AppComponent]
 })
