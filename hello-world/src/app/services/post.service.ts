@@ -1,9 +1,10 @@
 import { NotFoundError } from './../common/not-found';
 import { AppError } from './../common/app-error';
 import { Http } from '@angular/http';
-import { Injectable } from '@angular/core';
+import { Injectable, Pipe } from '@angular/core';
 import { catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
+import { BadInput } from '../common/bad-input';
 
 
 @Injectable({
@@ -16,7 +17,15 @@ export class PostService {
   constructor(private http: Http) { }
 
   getPosts(){
-    return this.http.get(this.url);
+    return this.http.get(this.url)
+    .pipe(
+      catchError((error:Response) =>{
+        if(error.status === 400)
+          return throwError(new BadInput(error.json()))
+
+          return throwError(new AppError(error.json()));
+      })
+    );
   }
 
   createPost(post){
