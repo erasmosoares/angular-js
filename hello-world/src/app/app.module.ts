@@ -16,6 +16,8 @@ import { InstructorFormComponent } from './instructor-form/instructor-form.compo
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { NewCourseFormComponent } from './new-course-form/new-course-form.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import { PostComponent } from './post/post.component';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -31,13 +33,15 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
     InstructorFormComponent,
     SignupFormComponent,
     NewCourseFormComponent,
-    ChangePasswordComponent
+    ChangePasswordComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    HttpModule
   ],
   providers: [
     AuthorsService
