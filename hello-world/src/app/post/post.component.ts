@@ -30,5 +30,14 @@ export class PostComponent {
         this.posts.splice(0,0,post); //put first position
     });
    }
+
+   updatePost(post){
+     //update only some properties
+     this.http.patch(this.url+'/'+post.id,JSON.stringify({ isRead:true}))
+     .subscribe(response =>{
+       console.log(response.json())
+     });
+     //this.http.put(this.url,JSON.stringify(post));
+   }
 }
  
