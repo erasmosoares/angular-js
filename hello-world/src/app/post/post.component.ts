@@ -12,7 +12,16 @@ import { BadInput } from '../common/bad-input';
 export class PostComponent implements OnInit{
   
   posts: any[];
+  ngOnInit(): void {
+    this.service.getPosts()
+    .subscribe(
+      response => {
+      this.posts = response.json();
+    });
+  }
 
+/* changed to handler error by global error handler
+   check common/app-error-handler.ts
   ngOnInit(): void {
     this.service.getPosts()
     .subscribe(
@@ -23,6 +32,7 @@ export class PostComponent implements OnInit{
       alert('An unexpected error occured.');
     });
   }
+  */
 
   //https://jsonplaceholder.typicode.com/posts
   constructor(private service: PostService) {  }
@@ -39,8 +49,7 @@ export class PostComponent implements OnInit{
       (error: AppError) => {
         if(error instanceof BadInput)
           alert('Bad input.');
-        else  
-          alert('An unexpected error occured.');
+        else  throw error;
     });
    }
 
@@ -50,10 +59,7 @@ export class PostComponent implements OnInit{
      .subscribe(
        response =>{
        console.log(response.json())
-     },
-        error => {
-      alert('An unexpected error occured.');
-    });
+     });
      //this.http.put(this.url,JSON.stringify(post));
    }
 
@@ -66,8 +72,7 @@ export class PostComponent implements OnInit{
       (error: AppError) => {
       if(error instanceof NotFoundError)
         alert('This post has already been deleted')  
-      else  
-        alert('An unexpected error occured.');
+      else  throw error;
     });
    }
 }

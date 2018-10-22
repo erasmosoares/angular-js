@@ -4,7 +4,7 @@ import { SummaryPipe } from './pipes/summary.pipe';
 import { TitleCasePipe } from './pipes/titlecase.pipe';
 import { AuthorsService } from './authors.service';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, ErrorHandler } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { AuthorsComponent } from './authors/authors.component';
@@ -19,6 +19,7 @@ import { NewCourseFormComponent } from './new-course-form/new-course-form.compon
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { PostComponent } from './post/post.component';
 import { HttpModule } from '@angular/http';
+import { AppErrorHandler } from './common/app-error-handler';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { HttpModule } from '@angular/http';
   ],
   providers: [
     AuthorsService,
-    PostService
+    PostService,
+    {provide: ErrorHandler, useClass: AppErrorHandler}
   ],
   bootstrap: [AppComponent]
 })
