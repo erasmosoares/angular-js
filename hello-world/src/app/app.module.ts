@@ -20,6 +20,7 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 import { PostComponent } from './post/post.component';
 import { HttpModule } from '@angular/http';
 import { AppErrorHandler } from './common/app-error-handler';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { AppErrorHandler } from './common/app-error-handler';
     FormsModule,
     ReactiveFormsModule,
     AngularFontAwesomeModule,
-    HttpModule
+    HttpModule,
+    HttpClientModule
   ],
   providers: [
     AuthorsService,
