@@ -11,3 +11,4 @@ export class GithubService extends DataService {
     super('https://api.github.com/users/erasmosoares/followers',http);
   }
 }
+ 
