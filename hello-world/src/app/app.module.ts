@@ -1,3 +1,4 @@
+import { GithubService } from './services/github.service';
 import { PostService } from './services/post.service';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { SummaryPipe } from './pipes/summary.pipe';
@@ -21,6 +22,7 @@ import { PostComponent } from './post/post.component';
 import { HttpModule } from '@angular/http';
 import { AppErrorHandler } from './common/app-error-handler';
 import { HttpClientModule } from '@angular/common/http';
+import { GithubFollowersComponent } from './github-followers/github-followers.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,8 @@ import { HttpClientModule } from '@angular/common/http';
     SignupFormComponent,
     NewCourseFormComponent,
     ChangePasswordComponent,
-    PostComponent
+    PostComponent,
+    GithubFollowersComponent
   ],
   imports: [
     BrowserModule,
@@ -50,6 +53,7 @@ import { HttpClientModule } from '@angular/common/http';
   providers: [
     AuthorsService,
     PostService,
+    GithubService,
     {provide: ErrorHandler, useClass: AppErrorHandler}
   ],
   bootstrap: [AppComponent]

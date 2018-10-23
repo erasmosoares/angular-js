@@ -1,0 +1,11 @@
+<div>
+<h6>My Followers</h6>
+<ul>
+    <li *ngFor="let user of followers; trackBy: trackUser">
+      {{user.login}}
+    </li>
+    <li >
+        Track
+    </li>
+  </ul>
+</div>
