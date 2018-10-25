@@ -3,7 +3,7 @@
   <img class="avatar" src="{{follower.avatar_url}}" alt="Generic placeholder image">
   <div class="media-body">
     <h5 class="mt-0">
-     <a [routerLink]="['/followers',follower.id]"> {{follower.login}} </a>
+     <a [routerLink]="['/followers',follower.id,follower.login]"> {{follower.login}} </a>
     </h5>
     <a href="follower.html_url">{{follower.html_url}}</a>
   </div>
