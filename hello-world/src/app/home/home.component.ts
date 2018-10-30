@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  archives = [
+    {year: 2018, month: 1},
+    {year: 2018, month: 2},
+    {year: 2018, month: 3},
+    {year: 2018, month: 4},
+  ]
   constructor() { }
 
   ngOnInit() {
