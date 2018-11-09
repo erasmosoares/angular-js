@@ -50,3 +50,7 @@ npm install
 ## Creating Custom Directive
 
 ng g d input-format
+
+## Cool Font Awesome 
+
+npm install --save font-awesome angular-font-awesome
